@@ -1,0 +1,185 @@
+:root {
+    --primary:#59ecc7;
+    --bg :rgb(37, 226, 176);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Libre Baskerville';
+    background-color: var(--bg);
+    color:#fff;
+   min-height: 2000px;
+}
+
+/* navbar */
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0,8);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 1rem;
+    font-weight: 700;
+    color:#08362a;
+
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+
+}
+
+.navbar .navbar-nav a {
+    color:rgb(7, 6, 6);
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color:var(--primary)
+
+}
+
+.navbar .navbar-nav a::after {
+    content: '' ;
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0,2s linear;
+
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar navbar-extra a {
+    color: #fff;
+    margin: 0 0,5rem;
+
+}
+
+.navbar .navbar-extra a:hover {
+    color:var(--primary)
+}
+
+#hamburger-menu {
+    display: none;
+
+}
+
+/*hero section*/
+.hero {
+min-height: 100vh;
+display:flex;
+align-items: center;
+background-image: url("bg2.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+position: relative;
+}
+
+.hero::after {
+    content: '';
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,rgba(37, 226, 176)3%, rgba(255,255,255,0) 25% );
+}
+
+.hero .content {
+    padding: 1,4rem 7%;
+    max-width: 60rem;
+}
+ 
+.hero .content h1{
+font-size: 3em;
+color: black;
+text-shadow: 1px 1px 3px rgba(255,255,255);
+line-height: 1,2;
+}
+
+.hero .content p{
+    font-size: 1,5em;
+    margin-top:1rem;
+    line-height: 1,4;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(255,255,255);
+    color: black;
+    }
+
+    /*hero section end*/
+
+    /*about*/
+    .About {
+        padding: 10rem 7% 1,4rem;
+
+    }
+
+    .About h2{
+        text.align: center;
+        font-size:2,6rem;
+        margin-bottom:3rem;
+    }
+/*media queris*/
+
+
+/*laptop*/
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+    
+
+
+
+/*tablet*/
+@media (max-width: 768px) {
+    html {
+        font-size: 62,5%;
+    }
+#hamburger-menu {
+    display: inline-block;
+}
+
+.navbar .navbar-nav {
+    display: absolute;
+    top:100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0,3s;
+}
+
+.navbar .navbar-nav.active {
+    right:0;
+
+}
+/*mobile phone*/
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
